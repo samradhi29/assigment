@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import "../styles/Listschools.css";
 
 export default function Listschools() {
+  const server = "https://schooldata-obk0.onrender.com";
   const location = useLocation();
   const { latitude, longitude } = location.state || {};
   const [schools, setSchools] = useState([]);
@@ -20,7 +21,7 @@ export default function Listschools() {
   const getSchoolData = async (lat, lng) => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/listSchools?userlatitude=${lat}&userlongitude=${lng}`
+        `${server}/listSchools?userlatitude=${lat}&userlongitude=${lng}`
       );
       setSchools(response.data);
       setError("");
