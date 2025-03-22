@@ -3,6 +3,7 @@ import axios from "axios";
 import "../styles/School.css";
 
 function School() {
+  const server = "https://schooldata-obk0.onrender.com";
   const [formData, setFormData] = useState({
     name: "",
     address: "",
@@ -20,7 +21,7 @@ function School() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3000/addschool",
+        `${server}/addschool`,
         formData
       );
       setMessage(response.data.message);
