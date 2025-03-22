@@ -1,0 +1,76 @@
+.listschools-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #f4f4f4;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  h2 {
+    color: #4a47a3;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  li {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.2s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  li strong {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  li p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 0.9rem;
+  }
+  
+  
+  .no-schools {
+    font-size: 1.1rem;
+    color: #777;
+    margin-top: 20px;
+    font-style: italic;
+  }
+  
+ 
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
