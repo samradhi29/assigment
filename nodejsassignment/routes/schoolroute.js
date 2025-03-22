@@ -6,7 +6,7 @@ router.post('/addschool' , (req , res)=>{
     if(!name || !address || !latitude || !longitude){
         return res.status(400).json({error : "invalid data input"});
     }
-    const query = 'INSERT INTO schools (name, address, latitude, longitude) VALUES (?, ?, ?, ?)';
+    const query = 'INSERT INTO school (name, address, latitude, longitude) VALUES (?, ?, ?, ?)';
     db.query(query , [name , address , latitude , longitude] , (err , result)=>{
         if(err) throw err;
         res.status(201).json({message : 'school added succesfully' , schoolId: result.insertId});
